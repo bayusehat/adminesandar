@@ -73,7 +73,7 @@ if(isset ($_SESSION['namauser']))
 									echo '</tr></table>';
 								$jum=mysqli_query($connect,"select count(id) as 'jmlh' from namaid where status_verifikasi='Ditolak' and status_pialang='Belum Selesai'");?>
 								<p>Jumlah File Ditolak = <?php
-								echo mysqli_result($jum, 0, "jmlh");
+								echo mysqli_fetch_array($jum)["jmlh"];
 								?></p></font></font>
 								
                             </div>
