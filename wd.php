@@ -57,7 +57,8 @@ if(isset ($_SESSION['namauser']))
 									//print_r($hasil=mysql_fetch_array($file));
 									while ($hasil=mysqli_fetch_array($query))
 									{	
-										$verifikasi=$hasil['status_verifikasi'];
+										// echo json_encode($hasil);
+										// $verifikasi=$hasil['status_verifikasi'];
 										echo "<tbody>
 										<tr class='odd gradeX'>
 											<td>".$hasil['nama_nasabah']."</td>";

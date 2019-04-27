@@ -58,7 +58,7 @@ if(isset ($_SESSION['namauser']))
                                     
 									while ($hasil=mysqli_fetch_array($query))
 									{	
-										$verifikasi=$hasil['status_verifikasi'];
+										// $verifikasi=$hasil['status_verifikasi'];
 										echo "<tbody>
 										<tr class='odd gradeX'>
 											<td>".$hasil['namanasabah']."</td>";
