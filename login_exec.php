@@ -6,7 +6,6 @@ require_once("function_pass.php");
 $username=$_POST['namauser'];
 $pwd=$_POST['password'];
 $pwd=encodePwd($pwd);
->>>>>>> 6d2a798cb0e71b1d2d938c882b5a60efb2d7437f
 $query=mysqli_query($connect,"select * from login where username='$username' and password='$pwd'");
 $cek=mysqli_num_rows($query);
 $hasil=mysqli_fetch_array($query);

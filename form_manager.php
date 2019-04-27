@@ -30,7 +30,7 @@
 		} else {
 		   	$sql = "INSERT INTO managers (nama, kode_ae, link, shorten, status, created_date, modified_date) VALUES ('$nama', '$kode', '$link', '$shorten', '1', '$date', '$date')";
 		
-			$retval = mysqil_query( $connect, $sql);
+			$retval = mysqli_query( $connect, $sql);
 
 			if(! $retval )
 			{
