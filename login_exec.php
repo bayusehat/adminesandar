@@ -21,7 +21,6 @@ echo "<script>document.location='index.php';</script>";
 	echo "<script>;
 		alert('Username/Password salah');
 		window.location='login.php';</script>";
-	echo $pwd;
 	echo mysqli_error($connect);
 }
 
