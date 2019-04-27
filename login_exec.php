@@ -4,7 +4,7 @@ include "config.php";
 require_once("function_pass.php");
 
 $username=$_POST['namauser'];
-$pwd=$_POST['password'];
+$pwd=encodePwd($_POST['password']);
 $query=mysqli_query($connect,"select * from login where username='$username' and password='$pwd'");
 $cek=mysqli_num_rows($query);
 $hasil=mysqli_fetch_array($query);
@@ -20,6 +20,7 @@ echo "<script>document.location='index.php';</script>";
 	echo "<script>;
 		alert('Username/Password salah');
 		window.location='login.php';</script>";
+	echo $pwd;
 	echo mysqli_error($connect);
 }
 
