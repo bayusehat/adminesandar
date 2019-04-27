@@ -4,8 +4,7 @@ include "config.php";
 require_once("function_pass.php");
 
 $username=$_POST['namauser'];
-$pwd=$_POST['password'];
-$pwd=encodePwd($pwd);
+$pwd=encodePwd($_POST['password']);
 $query=mysqli_query($connect,"select * from login where username='$username' and password='$pwd'");
 $cek=mysqli_num_rows($query);
 $hasil=mysqli_fetch_array($query);
@@ -18,9 +17,9 @@ $_SESSION['nama_lengkap']=$hasil['nama_lengkap'];
 $_SESSION['hak_akses']=$hasil['hak_akses'];
 echo "<script>document.location='index.php';</script>";
 }else{
-	echo "<script>;
-		alert('Username/Password salah');
-		window.location='login.php';</script>";
+	// echo "<script>;
+	// 	alert('Username/Password salah');
+	// 	window.location='login.php';</script>";
 	echo mysqli_error($connect);
 }
 
